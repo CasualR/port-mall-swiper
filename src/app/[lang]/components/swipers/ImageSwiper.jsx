@@ -1,3 +1,4 @@
+"use client"
 
 import SwiperCore, { Scrollbar, A11y } from 'swiper';
 
