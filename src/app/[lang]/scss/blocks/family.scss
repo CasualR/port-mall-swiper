@@ -1,0 +1,57 @@
+.family {
+
+    background: url(/images/background.png) center no-repeat;
+
+    padding: 20px 20px 0 20px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .visit {
+        margin-top: 32px;
+    }
+
+    .ImageSwiper {
+        margin-top: 32px;
+    }
+
+    .buttons {
+        margin-top: 14px;
+    }
+}
+
+.family__logo {
+    margin: 0 auto;
+
+    img {
+        width: 187px;
+    }
+}
+
+@media (min-width: 768px) {
+    .family {
+        padding: 20px 32px 0 32px;
+
+        .visit {
+            margin-top: 40px;
+        }
+
+        .ImageSwiper {
+            margin-top: 40px;
+        }
+
+        .buttons {
+            margin-top: 26px;
+        }
+    }
+
+    .family__logo {
+        margin: 0 auto;
+    
+        img {
+            width: 282px;
+        }
+    }
+}

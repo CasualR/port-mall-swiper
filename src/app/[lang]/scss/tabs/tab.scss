@@ -1,0 +1,65 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    button {
+        color: $light;
+        font-family: $font;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%;
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+
+        white-space: nowrap;
+
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: $gold;
+        }
+    }
+
+    .button-active {
+        position: relative;
+
+        color: $gold;
+
+        transition: all 0.3s ease 0s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: $gold;
+            bottom: -12px;
+
+            animation-name: opacity;
+            animation-duration: 0.3s;
+        }
+    }
+}
+
+.buttons__container {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+
+    padding: 12px 12px 12px 12px;
+
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

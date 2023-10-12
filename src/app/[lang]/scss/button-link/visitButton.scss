@@ -1,0 +1,38 @@
+.visit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding: 8px 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__text {
+        color: $gold;
+
+        font-family: $font;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+    }
+
+    &__path {
+        transform-origin: center;
+
+        transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+
+        .visit__path {
+            transform: rotate(90deg) translateX(5%);
+        }
+    }
+}

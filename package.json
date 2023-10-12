@@ -1,0 +1,27 @@
+{
+  "name": "da-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.4.2",
+    "negotiator": "^0.6.3",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "sass": "^1.68.0",
+    "tailwindcss": "latest"
+  }
+}

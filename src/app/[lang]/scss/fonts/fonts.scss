@@ -1,0 +1,21 @@
+@font-face {
+	font-family: ordina;
+	font-display: swap;
+	src: url("/fonts/Ordina-Regular.woff2") format("woff2"), url("/fonts/Ordina-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: ordina;
+	font-display: swap;
+	src: url("/fonts/Ordina-Medium.woff2") format("woff2"), url("/fonts/Ordina-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: OrdinaWide;
+	font-display: swap;
+	src: url("/fonts/Ordina-WideMedium.woff2") format("woff2"), url("/fonts/Ordina-WideMedium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}

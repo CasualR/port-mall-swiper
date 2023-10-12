@@ -1,0 +1,85 @@
+@import "fonts/fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+input {
+    outline: none;
+}
+
+$font: ordina;
+$fontwide: OrdinaWide;
+$gold: #C6A687;
+$golddark: #AF8B68;
+$dark: #1E1E21;
+$ldark: #333336;
+$line: #494843;
+$grey: #C9C7C2;
+$light: #FDFCFA;
+
+body {
+    color: $light;
+    background-color: $dark;
+
+    // overflow: hidden;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content {
+    color: $dark;
+
+    background-color: $light;
+}
+
+.block__title {
+    color: $light;
+    text-align: center;
+    font-family: $fontwide;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 21.6px */
+    letter-spacing: -0.36px;
+}
+
+@media (min-width: 768px) {
+    .block__title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 105%;
+    }
+}
+
+@import "swipers/imageSwiper";
+
+@import "blocks/family";
+
+@import "tabs/tab";
+
+@import "button-link/visitButton";
