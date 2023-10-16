@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../fonts/fonts";
+
 .family {
 
     background: url(/images/background.png) center no-repeat;
@@ -8,18 +11,18 @@
         display: flex;
         flex-direction: column;
     }
+}
 
-    .visit {
-        margin-top: 32px;
-    }
+.family__imageSwiper {
+    margin-top: 32px;
+}
 
-    .ImageSwiper {
-        margin-top: 32px;
-    }
+.family__buttons {
+    margin-top: 14px;
+}
 
-    .buttons {
-        margin-top: 14px;
-    }
+.family__visit {
+    margin-top: 32px;
 }
 
 .family__logo {
@@ -33,18 +36,18 @@
 @media (min-width: 768px) {
     .family {
         padding: 20px 32px 0 32px;
+    }
 
-        .visit {
-            margin-top: 40px;
-        }
+    .family__imageSwiper {
+        margin-top: 40px;
+    }
 
-        .ImageSwiper {
-            margin-top: 40px;
-        }
+    .family__buttons {
+        margin-top: 26px;
+    }
 
-        .buttons {
-            margin-top: 26px;
-        }
+    .family__visit {
+        margin-top: 40px;
     }
 
     .family__logo {

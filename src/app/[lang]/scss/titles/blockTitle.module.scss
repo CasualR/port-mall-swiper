@@ -1,0 +1,22 @@
+@import "../variables";
+@import "../fonts/fonts";
+
+.block__title {
+    color: $light;
+    text-align: center;
+    font-family: $fontwide;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 21.6px */
+    letter-spacing: -0.36px;
+}
+
+@media (min-width: 768px) {
+    .block__title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 105%;
+    }
+}

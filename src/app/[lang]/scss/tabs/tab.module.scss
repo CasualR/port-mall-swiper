@@ -1,3 +1,6 @@
+@import "../fonts/fonts";
+@import "../variables";
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -20,25 +23,25 @@
             color: $gold;
         }
     }
+}
 
-    .button-active {
-        position: relative;
+.button__active {
+    position: relative;
 
-        color: $gold;
+    color: $gold;
 
-        transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 
-        &::before {
-            content: '';
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background-color: $gold;
-            bottom: -12px;
+    &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: $gold;
+        bottom: -12px;
 
-            animation-name: opacity;
-            animation-duration: 0.3s;
-        }
+        animation-name: opacity;
+        animation-duration: 0.3s;
     }
 }
 

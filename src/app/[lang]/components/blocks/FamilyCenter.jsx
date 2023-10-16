@@ -8,23 +8,33 @@ import VisitButton from '../button-links/visitButton';
 import imagesByCategory from '../../data/data';
 import adventica from '../../links/links';
 
+import styles from "../../scss/blocks/family.module.scss";
+import title from "../../scss/titles/blockTitle.module.scss"
+
 const SwitchSwiper = () => {
     const [currentCategory, setCurrentCategory] = useState('karting');
 
     const categories = Object.keys(imagesByCategory);
 
+    const visitButtonStyles = {
+        marginTop: '32px',
+        '@media (min-width: 768px)': {
+            marginTop: '40px',
+        }
+    }
+
     return (
-        <div className="family">
-            <div className='family__container'>
-                <div className="family__header">
-                    <a href={adventica} target="_blank" className="family__logo">
+        <div className={styles.family}>
+            <div className={styles.family__container}>
+                <div className={styles.family__header}>
+                    <a href={adventica} target="_blank" className={styles.family__logo}>
                         <Image src="/images/family_logo.png" alt='' width={630} height={160} />
                     </a>
-                    <div className="family__title block__title">Центр для всей семьи</div>
-                    <Tabs categories={categories} currentCategory={currentCategory} setCurrentCategory={setCurrentCategory} labels={imagesByCategory} />
+                    <div className={title.block__title}>Центр для всей семьи</div>
+                    <Tabs customClasses={[styles.family__buttons]} categories={categories} currentCategory={currentCategory} setCurrentCategory={setCurrentCategory} labels={imagesByCategory} />
                 </div>
-                <Slider info={imagesByCategory[currentCategory]} />
-                <VisitButton link={adventica}/>
+                <Slider customClasses={[styles.family__imageSwiper]} info={imagesByCategory[currentCategory]} />
+                <VisitButton customClasses={[styles.family__visit]} link={adventica} />
             </div>
         </div>
     );

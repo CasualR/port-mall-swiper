@@ -18,7 +18,7 @@ import 'swiper/css/effect-coverflow';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const ImageSwiper = ({ info }) => {
+const ImageSwiper = ({ info, customClasses }) => {
     const images = info.images;
 
     console.log(info);
@@ -35,9 +35,12 @@ const ImageSwiper = ({ info }) => {
                 modifier: 1,
                 slideShadows: false,
             }}
-            navigation
+            navigation={{
+                nextEl: '.custom-next',
+                prevEl: '.custom-prev',
+            }}
             modules={[EffectCoverflow]}
-            className="ImageSwiper"
+            className={`ImageSwiper ${customClasses ? customClasses.join(' ') : ''}`}
             speed={1000}
 
             breakpoints={{

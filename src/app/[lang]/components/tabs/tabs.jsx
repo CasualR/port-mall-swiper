@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Tabs = ({ categories, currentCategory, setCurrentCategory, labels }) => {
+import styles from '../../scss/tabs/tab.module.scss'
+
+const Tabs = ({ categories, currentCategory, setCurrentCategory, labels, customClasses }) => {
 
     const handleCategoryChange = (category) => {
         setCurrentCategory(category);
@@ -9,15 +11,15 @@ const Tabs = ({ categories, currentCategory, setCurrentCategory, labels }) => {
 
     return (
         <>
-            <div className='buttons'>
-                <div className='buttons__container'>
+            <div className={`${styles.buttons} ${customClasses ? customClasses.join(' ') : ''}`}>
+                <div className={styles.buttons__container}>
                     {categories.map((category, index) => (
                         <React.Fragment key={category}>
                             {index > 0 && <Image src='/images/romb.svg' alt='' width={10} height={11} />}
                             <button
                                 key={category}
                                 onClick={() => handleCategoryChange(category)}
-                                className={currentCategory === category ? 'button-active' : ''}
+                                className={currentCategory === category ? styles.button__active : ''}
                             >
                                 {labels[category].name}
                             </button>
